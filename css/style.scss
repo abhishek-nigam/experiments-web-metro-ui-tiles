@@ -1,0 +1,373 @@
+$flex-row-small-unit: 6rem;
+$flex-row-medium-unit: 8rem;
+
+$flex-col-small-half: 48%;
+$flex-col-small-full: 100%;
+
+$flex-col-medium-one-third: 32%;
+$flex-col-medium-two-third: 66%;
+$flex-col-medium-full: 100%;
+
+* {
+    padding: 0;
+    margin: 0;
+}
+
+.container {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    background: burlywood;
+}
+
+.grid {
+    background: darkkhaki;
+    padding-top: 0.7rem;
+
+        > div {
+            background: coral;
+            cursor: pointer;
+        }
+}
+
+@media (max-width: 449px) {
+    .grid {
+        width: 95%;
+        height: 95%;
+    
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+    
+        > div {
+            height: $flex-row-small-unit;
+            margin-bottom: 0.7rem;
+        }
+    
+        &__item {
+        
+            &--tedx-head {
+                width: $flex-col-small-full;
+                order: 1;
+            }
+    
+            &--date {
+                width: $flex-col-small-half;
+                order: 2;
+            }
+    
+            &--countdown {
+                width: $flex-col-small-half;
+                order: 3;
+            }
+    
+            &--college {
+                width: $flex-col-small-full;
+                order: 8;
+            }
+    
+            &--social-media {
+                width: $flex-col-small-half;
+                order: 6;
+            }
+    
+            &--tickets {
+                width: $flex-col-small-full;
+                order: 5;
+            }
+    
+            &--speakers {
+                width: $flex-col-small-full;
+                order: 4;
+            }
+    
+            &--venue {
+                width: $flex-col-small-half;
+                order: 12;
+            }
+
+            &--youtube {
+                width: $flex-col-small-half;
+                order: 7;
+            }
+    
+            &--sponsors {
+                width: $flex-col-small-half; 
+                order: 11;  
+            }
+    
+            &--tedx-info {
+                width: $flex-col-small-full;
+                order: 9;
+            }
+    
+            &--theme {
+                width: $flex-col-small-full;
+                order: 10;
+            }
+    
+            &--media {
+                width: $flex-col-small-half;
+                order: 14;
+            }
+    
+            &--team {
+                width: $flex-col-small-half;
+                order: 13;
+            }
+        }
+    }
+}
+
+@media (min-width:450px) and (max-width: 991px) {
+    .grid {
+        width: 95%;
+        height: 95%;
+    
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+    
+        > div {
+            height: $flex-row-medium-unit;
+            margin-bottom: 0.7rem;
+        }
+    
+        &__item {
+        
+            &--tedx-head {
+                width: $flex-col-medium-two-third;
+                order: 1;
+            }
+    
+            &--date {
+                width: $flex-col-medium-one-third;
+                order: 2;
+            }
+    
+            &--countdown {
+                width: $flex-col-medium-two-third;
+                order: 5;
+            }
+    
+            &--college {
+                width: $flex-col-medium-one-third;
+                order: 8;
+            }
+    
+            &--social-media {
+                width: $flex-col-medium-one-third;
+                order: 4;
+            }
+    
+            &--tickets {
+                width: $flex-col-medium-two-third;
+                order: 9;
+            }
+    
+            &--speakers {
+                width: $flex-col-medium-full;
+                order: 3;
+            }
+    
+            &--venue {
+                width: $flex-col-medium-one-third;
+                order: 11;
+            }
+
+            &--youtube {
+                width: $flex-col-medium-one-third;
+                order: 12;
+            }
+    
+            &--sponsors {
+                width: $flex-col-medium-one-third; 
+                order: 10;  
+            }
+    
+            &--tedx-info {
+                width: $flex-col-medium-two-third;
+                order: 6;
+            }
+    
+            &--theme {
+                width: $flex-col-medium-one-third;
+                order: 7;
+            }
+    
+            &--media {
+                width: $flex-col-medium-one-third;
+                order: 14;
+            }
+    
+            &--team {
+                width: $flex-col-medium-two-third;
+                order: 13;
+            }
+        }
+    }
+}
+
+
+@media (min-width: 992px) {
+
+    .container {
+        height: 100vh;
+    }
+
+    .grid {
+        width: 80%;
+        height: 90%;        
+    
+        display: grid;
+        grid-template-columns: repeat(7, 1fr);
+        grid-template-rows: repeat(5, 1fr);
+        grid-gap: 0.8rem;
+    
+        &__item {
+    
+            &--tedx-head {
+                grid-row: span 1;
+                grid-column: span 2;
+            }
+    
+            &--date {
+                grid-row: span 1;
+                grid-column: span 2;
+            }
+    
+            &--countdown {
+                grid-row: span 1;
+                grid-column: span 1;
+            }
+    
+            &--college {
+                grid-row: span 1;
+                grid-column: span 2;
+            }
+    
+            &--social-media {
+                grid-row: span 1;
+                grid-column: span 1;
+            }
+    
+            &--tickets {
+                grid-row: span 2;
+                grid-column: span 1;
+            }
+    
+            &--speakers {
+                grid-row: span 2;
+                grid-column: span 4;
+            }
+    
+            &--venue {
+                grid-row: span 2;
+                grid-column: span 1;
+            }
+
+            &--youtube {
+                grid-row: span 1;
+                grid-column: span 1;
+            }
+    
+            &--sponsors {
+                grid-row: span 1;
+                grid-column: span 2;
+            }
+    
+            &--tedx-info {
+                grid-row: span 2;
+                grid-column: span 2;
+            }
+    
+            &--theme {
+                grid-row: span 1;
+                grid-column: span 3;
+            }
+    
+            &--media {
+                grid-row: span 1;
+                grid-column: span 2;
+            }
+    
+            &--team {
+                grid-row: span 1;
+                grid-column: span 3;
+            }
+        }
+    }
+
+}
+
+
+////////////////////////////
+
+body {
+    position: relative; //for .overlay-container absolute positioning
+    overflow-x: hidden; //because .overlay-container is X-translated 100%
+}
+
+.overlay-container {
+    min-height: 100%;
+    width: 100%;
+
+    position: absolute; //beacause it show go over .container
+    top: 0;
+    left: 0;
+    ///
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+
+    transform: translateX(+100%);
+
+    background-color: palevioletred;
+
+    transition: all ease-out 0.3s;
+
+    > div {
+        position: relative; //to relatively position close button
+
+        width: 95%;
+        margin-top: 4rem;
+
+        border-radius: 3px;
+        background-color: wheat;
+
+        .overlay-close-btn {
+            position: absolute;
+            top: 0;
+            right: 0;
+            transform: translateY(-130%);
+
+            font-size: 2.5rem;
+            cursor: pointer;
+        }
+    }
+}
+
+@media (min-width:992px) {
+
+    .overlay-container {
+
+        > div {
+            width: 80%;
+            margin-top: 3rem;
+
+            .overlay-close-btn {
+                transform: translateX(+130%);
+            }
+        }
+    }
+
+}
+
+.show-overlay {
+    transform: translateX(0);
+}
+
+///////////////////////////////
+
